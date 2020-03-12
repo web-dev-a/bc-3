@@ -12,7 +12,7 @@
                     <img src="{{ $post.Params.home_img | relURL }}" alt="" />
                 </span>
                 <a href="{{ $post.URL }}">
-                    <h2>{{ $post.Title }}</h2>
+                    <h3>{{ $post.Title }}</h3>
                     <div class="content">
                         {{ partial "markdownify-block" $post.Params.excerpt }}
                     </div>
@@ -28,7 +28,7 @@
                     <img src="{{ $post.Params.home_img | relURL }}" alt="" />
                 </span>
                 <a href="{{ $post.URL }}">
-                    <h2>{{ $post.Title }}</h2>
+                    <h3>{{ $post.Title }}</h3>
                     <div class="content">
                         {{ partial "markdownify-block" $post.Params.excerpt }}
                     </div>
