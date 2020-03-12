@@ -22,7 +22,7 @@
     </section>
     <section class="tiles">
                 <h2>Offers</h2>
-{{ range $post := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
+{{ range $post := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
             <article class="{{ $post.Params.home_style }}">
                 <span class="image">
                     <img src="{{ $post.Params.home_img | relURL }}" alt="" />
