@@ -7,7 +7,7 @@
     <section class="tiles">
 
               {{ $display_posts := ((.Site.GetPage "section" "/posts").Pages).ByDate.Reverse }}
-      {{ $recent_posts := $display_posts | first 3 }}
+      {{ $recent_posts := $display_posts | $post.Date > now.Format "2006-03-12" }}
       {{ range $post := $recent_posts }}
             <article class="{{ $post.Params.home_style }}">
                 <span class="image">
