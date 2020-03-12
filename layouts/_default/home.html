@@ -23,18 +23,19 @@
 
     <section class="tiles">
         <h2>Offers</h2>
-{{ range $coupon := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
-            <article class="{{ $coupon.Params.home_style }}">
+{{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
+            <article class="{{ $offer.Params.home_style }}">
                 <span class="image">
-                    <img src="{{ $coupon.Params.home_img | relURL }}" alt="" />
+                    <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
                 </span>
-                <a href="{{ $coupon.URL }}">
-                    <h3>{{ $coupon.Title }}</h3>
+                <a href="{{ $offer.URL }}">
+                    <h3>{{ $offer.Title }}</h3>
                     <div class="content">
-                        {{ partial "markdownify-block" $coupon.Params.excerpt }}
+                        {{ partial "markdownify-block" $offer.Params.excerpt }}
                     </div>
                 </a>
             </article>
         {{ end }}
     </section>
+
 {{ end }}
