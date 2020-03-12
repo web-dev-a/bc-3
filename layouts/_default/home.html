@@ -20,20 +20,5 @@
             </article>
         {{ end }}
     </section>
-    <section class="tiles">
-                <h2>Offers</h2>
-{{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
-            <article class="{{ $offer.Params.home_style }}">
-                <span class="image">
-                    <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
-                </span>
-                <a href="{{ $offer.URL }}">
-                    <h3>{{ $offer.Title }}</h3>
-                    <div class="content">
-                        {{ partial "markdownify-block" $offer.Params.excerpt }}
-                    </div>
-                </a>
-            </article>
-        {{ end }}
-    </section>
+
 {{ end }}
