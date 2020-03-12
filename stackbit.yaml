@@ -182,7 +182,7 @@ models:
     type: page
     label: Page
     template: page
-    exclude: posts/**
+    exclude: offers/**
     fields:
       - type: string
         name: title
@@ -200,7 +200,7 @@ models:
     type: page
     label: Post
     template: page
-    folder: posts
+    folder: offers
     fields:
       - type: string
         name: title
