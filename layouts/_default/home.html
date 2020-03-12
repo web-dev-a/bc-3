@@ -5,10 +5,7 @@
         {{ .Content }}
     </header>
     <section class="tiles">
-
-              {{ $display_posts := ((.Site.GetPage "section" "/posts").Pages).ByDate.Reverse }}
-      {{ $recent_posts := $display_posts | first 3 }}
-      {{ range $post := $recent_posts }}
+{{ range $post := ((.Site.GetPage "section" "/posts").Pages).ByDate.Reverse }}
             <article class="{{ $post.Params.home_style }}">
                 <span class="image">
                     <img src="{{ $post.Params.home_img | relURL }}" alt="" />
