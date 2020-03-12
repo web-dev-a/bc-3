@@ -20,7 +20,7 @@
             </article>
         {{ end }}
     </section>
-    <section class="tiles2">
+    <section class="tiles">
         <h2>Offers</h2>
 {{ range $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
             <article class="{{ $coupon.Params.home_style }}">
