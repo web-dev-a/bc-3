@@ -6,15 +6,15 @@
     </header>
     <section class="tiles">
         <h2>Coupons</h2>
-{{ range $post := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
-            <article class="{{ $post.Params.home_style }}">
+{{ range $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
+            <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
-                    <img src="{{ $post.Params.home_img | relURL }}" alt="" />
+                    <img src="{{ $coupon.Params.home_img | relURL }}" alt="" />
                 </span>
-                <a href="{{ $post.URL }}">
+                <a href="{{ $coupon.URL }}">
                     <h3>{{ $post.Title }}</h3>
                     <div class="content">
-                        {{ partial "markdownify-block" $post.Params.excerpt }}
+                        {{ partial "markdownify-block" $coupon.Params.excerpt }}
                     </div>
                 </a>
             </article>
@@ -22,15 +22,15 @@
     </section>
     <section class="tiles">
                 <h2>Offers</h2>
-{{ range $post := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
-            <article class="{{ $post.Params.home_style }}">
+{{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
+            <article class="{{ $offer.Params.home_style }}">
                 <span class="image">
-                    <img src="{{ $post.Params.home_img | relURL }}" alt="" />
+                    <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
                 </span>
-                <a href="{{ $post.URL }}">
+                <a href="{{ $offer.URL }}">
                     <h3>{{ $post.Title }}</h3>
                     <div class="content">
-                        {{ partial "markdownify-block" $post.Params.excerpt }}
+                        {{ partial "markdownify-block" $offer.Params.excerpt }}
                     </div>
                 </a>
             </article>
