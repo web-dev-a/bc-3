@@ -6,7 +6,7 @@
     </header>
 
     <section class="tiles">
-                <h2 style="margin-bottom: 40px; margin-right: 40px">Coupons</h2><br />
+                <div><h2 style="">Coupons</h2></div>
 {{ range $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
             <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
@@ -23,7 +23,7 @@
     </section>
 
     <section class="tiles">
-                <h2 style="margin-top: 100px; margin-bottom: 40px; margin-right: 40px">Offers</h2><br />
+                <div><h2 style="">Offers</h2></div>
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
             <article class="{{ $offer.Params.home_style }}">
                 <span class="image">
