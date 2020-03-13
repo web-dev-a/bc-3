@@ -21,8 +21,8 @@
         {{ end }} 
     </section>
 
-        <h2>Offers</h2>
     <section class="tiles">
+                <h2>Offers</h2><br />
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
             <article class="{{ $offer.Params.home_style }}">
                 <span class="image">
