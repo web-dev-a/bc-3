@@ -4,8 +4,9 @@
         <h1>{{ replace .Params.header "\n" "<br />" | safeHTML }}</h1>
         {{ .Content }}
     </header>
-        <h2>Coupons</h2>
+
     <section class="tiles">
+                <h2>Coupons</h2><br />
 {{ range $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
             <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
