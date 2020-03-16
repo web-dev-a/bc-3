@@ -6,7 +6,10 @@
     </header>
 
     <section class="tiles">
-                <div><h2 style="">Coupons</h2></div>
+                <div><h2 style="">Coupons</h2></div>      
+    </section>
+
+    <section class="tiles">
 {{ range $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
             <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
