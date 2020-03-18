@@ -1656,7 +1656,11 @@ button,
                 .tiles article > a .content > :last-child {
                     margin-bottom: 0; }
         .tiles article.style1 > .image:before {
-            background-color: #f2849e; }
+    
+                background-color: #333333;
+                opacity: 0.35; }	
+			
+			
         .tiles article.style2 > .image:before {
             background-color: #7ecaf6; }
         .tiles article.style3 > .image:before {
@@ -1673,8 +1677,10 @@ button,
             -ms-transform: scale(1.1);
             transform: scale(1.1); }
             body:not(.is-touch) .tiles article:hover > .image:before {
-                background-color: #333333;
-                opacity: 0.35; }
+
+				
+				background-color: #f2849e; }
+				
             body:not(.is-touch) .tiles article:hover > .image:after {
                 opacity: 0; }
         body:not(.is-touch) .tiles article:hover .content {
