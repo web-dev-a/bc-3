@@ -7,9 +7,9 @@
     {{ .Content }}
 
     <section class="tiles">
-      {{  $ab := .Title }} 
+      {{  $filter := .Title }} 
 {{ range $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
-        {{ if in .Params.tags $ab }}
+        {{ if in .Params.tags $filter }}
             <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
                     <img src="{{ $coupon.Params.home_img | relURL }}" alt="" />
@@ -24,7 +24,4 @@
         {{ end }}     
                 {{ end }}  
     </section>
-
-<p> {{ .Params.tags }} - {{ .Params.country_list }} - {{ .Title }} </p>
-
 {{ end }}
