@@ -6,4 +6,21 @@
     {{ end }}
     {{ .Content }}
 
+    <section class="tiles">
+{{ range $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
+            <article class="{{ $coupon.Params.home_style }}">
+                <span class="image">
+                    <img src="{{ $coupon.Params.home_img | relURL }}" alt="" />
+                </span>
+                <a href="{{ $coupon.URL }}">
+                    <h3>{{ $coupon.Title }}</h3>
+                    <div class="content">
+                        {{ partial "markdownify-block" $coupon.Params.excerpt }}
+                    </div>
+                </a>
+            </article>
+        {{ end }}     
+    </section>
+
+
 {{ end }}
