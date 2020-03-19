@@ -24,11 +24,12 @@
                     </div>
                 </a>
             </article>
-        {{ end }}     
-        {{ if not (in .Params.tags $filter) }} 
-                        <p>No active coupons</p>
+                {{ else }} 
+                       {{ $message := "No active coupons" }}
                    {{ end }}  
-        
+        {{ end }}     
+
+        <h3>{{ $message }}</h3>
                 {{ end }}  
     </section>
 
