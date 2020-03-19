@@ -8,7 +8,7 @@
 
     <section class="tiles">
         {{ $p := slice "finland" }}
-{{ range $coupon := ((.Site.GetPage "section" "/coupon" $p).Pages).ByDate.Reverse }}
+{{ range $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse $p }}
             <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
                     <img src="{{ $coupon.Params.home_img | relURL }}" alt="" />
