@@ -12,10 +12,7 @@
     <section class="tiles">
       {{  $filter := .Title }} 
 {{ range $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
-        {{ if in .Params.tags $filter }}
-                        {{ if not $coupon }}
-        <p>No active coupons</p>
-                {{ else }}    
+        {{ if in .Params.tags $filter }} 
             <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
                     <img src="{{ $coupon.Params.home_img | relURL }}" alt="" />
@@ -27,6 +24,8 @@
                     </div>
                 </a>
             </article>
+                        {{ else }} 
+                <p>No active coupons</p>
         {{ end }}     
 
    
