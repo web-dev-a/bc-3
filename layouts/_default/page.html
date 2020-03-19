@@ -7,9 +7,9 @@
     {{ .Content }}
 
     <section class="tiles">
-        {{ $p := slice "finland" }}
 {{ range $coupon := ((.Site.GetPage "section" "/coupon" .Title).Pages).ByDate.Reverse }}
-            <article class="{{ $coupon.Params.home_style $p }}">
+        {{ if in .Params.tags "finland" }}
+            <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
                     <img src="{{ $coupon.Params.home_img | relURL }}" alt="" />
                 </span>
