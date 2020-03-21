@@ -11,13 +11,9 @@
     </section>
     <section class="tiles">
         
-        {{ $t := $.Site.GetPage "taxonomyTerm" "tags" }}
-{{ range first 2 $t.Data.Terms.ByCount }}
-    <li>{{.}}</li>
-{{ end }}
-        
       {{  $filter := .Title }} 
-
+{{ with .Site.GetPage "section" "/coupon" }}
+        {{ if in .Params.tags $filter }}
 {{ range  $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
 
             <article class="{{ $coupon.Params.home_style }}">
@@ -35,7 +31,7 @@
         {{ else }}
         <p>NoC</p>
         {{ end }}     
-
+{{ end }}
     </section>
 
     <section class="" style="margin-top:75px;margin-bottom:-30px">
