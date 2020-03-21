@@ -12,8 +12,8 @@
     <section class="tiles">
         
       {{  $filter := .Title }} 
-{{ with .Site.GetPage "section" "/coupon" }}
-        {{ if in .Params.tags $filter }}
+{{ if in $coupon := ((.Site.GetPage "section" "/coupon").Params.tags $filter }}
+
 {{ range  $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
 
             <article class="{{ $coupon.Params.home_style }}">
@@ -31,7 +31,6 @@
         {{ else }}
         <p>NoC</p>
         {{ end }}     
-{{ end }}
 {{ end }}
         
     </section>
