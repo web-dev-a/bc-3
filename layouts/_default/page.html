@@ -11,7 +11,8 @@
     </section>
     <section class="tiles">
       {{  $filter := .Title }} 
-{{ range where $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse "intersect" $filter }}
+       {{ $coupon := ((.Site.GetPage "section" "/coupon").Pages) }}
+{{ range where $coupon "intersect" $filter }}
 
             <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
