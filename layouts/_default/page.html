@@ -11,8 +11,7 @@
     </section>
     <section class="tiles">
       {{  $filter := .Title }} 
-      {{ $coupon := ((.Site.GetPage "section" "/coupon").Pages) }}
-{{ range (where $coupon "Params.tags" "Finland").ByDate.Reverse  }}
+{{ range $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse  }}
 
             <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
