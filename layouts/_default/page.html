@@ -11,8 +11,8 @@
     </section>
     <section class="tiles">
       {{  $filter := .Title }} 
-{{ range where ($coupon := .Site.Pages "section" "/coupon") }}
-        {{ if in .Params.tags $filter }} 
+{{ range where ($coupon := .Site.Pages "section" "/coupon") in .Params.tags $filter }}
+
             <article class="{{ $coupon.Params.home_style }}">
                 <span class="image">
                     <img src="{{ $coupon.Params.home_img | relURL }}" alt="" />
@@ -24,7 +24,7 @@
                     </div>
                 </a>
             </article>
-                   {{ end }}  
+
         {{ else }}
         <p>NoC</p>
         {{ end }}     
