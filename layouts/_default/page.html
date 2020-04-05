@@ -13,12 +13,9 @@
                 <div><h2 style="">Coupons</h2></div>      
     </section>
     <section class="tiles">
-        {{ $taxo := "lithuania" }}
-<ul class="{{ $taxo }}">
-    {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
-        {{ range .Pages }}
-            <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
-        {{ end }}
+<ul>
+    {{ range .Site.Taxonomies.tags }}
+            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
     {{ end }}
 </ul>
         
