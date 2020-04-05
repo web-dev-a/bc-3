@@ -15,19 +15,12 @@
     <section class="tiles">
 {{  $filter := .Title }} 
 {{ with (($.Site.GetPage "section" "/offer").Pages) }}
-        {{ $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
         {{ range .Pages.ByParam "Finland" }}
-            <article class="{{ $offer.Params.home_style }}">
-                <span class="image">
-                    <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
-                </span>
-                <a href="{{ $offer.URL }}">
-                    <h3>{{ $offer.Title }}</h3>
-                    <div class="content">
-                        {{ partial "markdownify-block" $offer.Params.excerpt }}
-                    </div>
-                </a>
-            </article>
+   
+   
+                    <h3>{{ .Title }}</h3>
+                  
+               
         {{ end }}
                 {{ end }}
     </section>
