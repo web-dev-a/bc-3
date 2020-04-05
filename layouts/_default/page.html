@@ -7,7 +7,13 @@
     {{ .Content }}
 
 
-{{ $taxo := "tags" }}
+
+
+    <section class="" style="margin-top:0px;margin-bottom:-30px">
+                <div><h2 style="">Coupons</h2></div>      
+    </section>
+    <section class="tiles">
+        {{ $taxo := .Title }}
 <ul class="{{ $taxo }}">
     {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
         {{ range .Pages }}
@@ -15,11 +21,6 @@
         {{ end }}
     {{ end }}
 </ul>
-
-    <section class="" style="margin-top:0px;margin-bottom:-30px">
-                <div><h2 style="">Coupons</h2></div>      
-    </section>
-    <section class="tiles">
         
     </section>
 
