@@ -15,12 +15,15 @@
     <section class="tiles">
 {{  $filter := .Title }} 
 {{ with (($.Site.GetPage "section" "/offer").Pages) }}
+        {{ range .Pages}}
+        <p>ok</p>
         {{ range .Pages.ByParam "Finland" }}
    
    
                     <h3>{{ .Title }}</h3>
                   
                
+        {{ end }}               
         {{ end }}
                 {{ end }}
     </section>
