@@ -13,7 +13,7 @@
                 <div><h2 style="">Coupons</h2></div>      
     </section>
     <section class="tiles">
-        {{ $taxo := "Lithuania" }}
+        {{ $taxo := "lithuania" }}
 <ul class="{{ $taxo }}">
     {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
         {{ range .Pages }}
