@@ -6,6 +6,16 @@
     {{ end }}
     {{ .Content }}
 
+
+{{ $taxo := "tags" }}
+<ul class="{{ $taxo }}">
+    {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+        {{ range .Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
+        {{ end }}
+    {{ end }}
+</ul>
+
     <section class="" style="margin-top:0px;margin-bottom:-30px">
                 <div><h2 style="">Coupons</h2></div>      
     </section>
