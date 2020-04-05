@@ -13,7 +13,7 @@
                 <div><h2 style="">Coupons</h2></div>      
     </section>
     <section class="tiles">
-<ul>
+ <ul>
     {{ range .Site.Taxonomies.tags }}
             <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
     {{ end }}
