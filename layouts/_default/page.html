@@ -21,27 +21,6 @@
     </section>
     <section class="tiles">
         
-      {{  $filter := .Title }} 
-
-{{ range  $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
-
-            <article class="{{ $coupon.Params.home_style }}">
-                <span class="image">
-                    <img src="{{ $coupon.Params.home_img | relURL }}" alt="" />
-                </span>
-                <a href="{{ $coupon.URL }}">
-                    <h3>{{ $coupon.Title }}</h3>
-                    <div class="content">
-                        {{ partial "markdownify-block" $coupon.Params.excerpt }}
-                    </div>
-                </a>
-            </article>
-
-        {{ else }}
-        <p>NoC</p>
-        {{ end }}     
-{{ end }}
-        
     </section>
 
     <section class="" style="margin-top:75px;margin-bottom:-30px">
