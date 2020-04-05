@@ -15,7 +15,7 @@
     <section class="tiles">
         {{ $taxo := .Title }}
 <ul class="{{ $taxo }}">
-    {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+    {{ with ($.Site.GetPage "section" "/offer" (printf "/%s" $taxo)) }}
         {{ range .Pages }}
             <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
         {{ end }}
