@@ -22,7 +22,6 @@
     <section class="tiles">
         
       {{  $filter := .Title }} 
-{{ if in ((.Site.GetPage "section" "/coupon").Pages) .Params.tags $filter }}
 
 {{ range  $coupon := ((.Site.GetPage "section" "/coupon").Pages).ByDate.Reverse }}
 
