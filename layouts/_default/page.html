@@ -13,9 +13,9 @@
                 <div><h2 style="">Coupons</h2></div>      
     </section>
     <section class="tiles">
-        {{ $taxo := .Title }}
+        {{ $taxo := "Finland" }}
 <ul class="{{ $taxo }}">
-    {{ with ($.Site.GetPage (printf "/offer" $taxo)) }}
+    {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
         {{ range .Pages }}
             <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
         {{ end }}
