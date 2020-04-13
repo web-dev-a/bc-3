@@ -17,24 +17,6 @@
       
     </section>
 
-    <section class="" style="margin-top:0px;margin-bottom:-30px">
-                <div><h2 style="">Coupons</h2></div>      
-    </section>
-    <section class="tiles">
-{{  $filter := .Title }} 
-{{ with (($.Site.GetPage "section" "/offer").Pages) }}
-        {{ range .Pages}}
-        <p>ok</p>
-        {{ range .Pages.ByParam "Finland" }}
-   
-   
-                    <h3>{{ .Title }}</h3>
-                  
-               
-        {{ end }}               
-        {{ end }}
-                {{ end }}
-    </section>
 
     <section class="" style="margin-top:75px;margin-bottom:-30px">
                 <div><h2 style="">Offers</h2></div>        
