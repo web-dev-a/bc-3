@@ -12,7 +12,7 @@
     <section class="tiles">
 {{  $filter := .Title }} 
 {{ range (where (.Site.GetPage "section" "/offer").Pages "Params.tags" "eq" "finland").ByDate.Reverse }}
-{{ .Title }}
+        <p> {{ .Title }} </p>
         {{ end }}
       
     </section>
