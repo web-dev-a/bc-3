@@ -11,13 +11,11 @@
     </section>
     <section class="tiles">
 {{  $filter := .Title }} 
-{{ range (where ((.Site.GetPage "section" "/offer").Pages "Params.tags" "finland").ByDate.Reverse) }}
+{{ range (where (.Site.GetPage "section" "/offer").Pages "Params.tags" "finland").ByDate.Reverse }}
 {{ .Title }}
         {{ end }}
       
     </section>
-
-
 
     <section class="" style="margin-top:0px;margin-bottom:-30px">
                 <div><h2 style="">Coupons</h2></div>      
