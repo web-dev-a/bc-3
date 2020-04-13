@@ -11,8 +11,8 @@
     </section>
     <section class="tiles">
 {{  $filter := .Title }} 
-{{ range where ((.Site.GetPage "section" "/offer").Pages "Params.tags" "finland").ByDate.Reverse }}
-<p>ok</p>
+{{ range (where ((.Site.GetPage "section" "/offer").Pages "Params.tags" "finland")).ByDate.Reverse }}
+{{ .Title }}
         {{ end }}
       
     </section>
