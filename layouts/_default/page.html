@@ -6,6 +6,27 @@
     {{ end }}
     {{ .Content }}
 
+    <section class="" style="margin-top:75px;margin-bottom:-30px">
+                <div><h2 style="">Offers2</h2></div>        
+    </section>
+    <section class="tiles">
+{{  $filter := .Title }} 
+{{ range $offer := ((.Site.GetPage "section" "/offer").Pages.Params.tags $filter).ByDate.Reverse }}
+    
+            <article class="{{ $offer.Params.home_style }}">
+                <span class="image">
+                    <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
+                </span>
+                <a href="{{ $offer.URL }}">
+                    <h3>{{ $offer.Title }}</h3>
+                    <div class="content">
+                        {{ partial "markdownify-block" $offer.Params.excerpt }}
+                    </div>
+                </a>
+            </article>
+        {{ end }}
+      
+    </section>
 
 
 
