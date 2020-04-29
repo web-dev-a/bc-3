@@ -8,7 +8,7 @@
 
 
     <section class="tiles">
-{{  $filter := Finland }} 
+{{  $filter := "Finland" }} 
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
         {{ if in .Params.tags $filter }}
             <article class="{{ $offer.Params.home_style }}">
