@@ -8,10 +8,12 @@
 
 
     <section class="tiles">
-        {{ with .Site.Params.tags.Title }}
-            <p> yes </p>
-               {{ end }}
+
 {{  $filter := "Finland" }} 
+        {{ if in .Params.tags $filter }}
+        <p> yes </p>
+               {{ end }}
+        
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
         {{ if in .Params.tags $filter }}
             <article class="{{ $offer.Params.home_style }}">
