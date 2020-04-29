@@ -6,7 +6,7 @@
     {{ end }}
     {{ .Content }}
 
-{{ $remaining := where .Site.Pages.ByDate.Reverse "section" "/offer" }}
+{{ $remaining := where .Site.Pages.ByDate.Reverse "section" "offer" }}
 {{ $remaining := where $remaining ".Params.tags" "finland"}}
 {{ range $remaining }}
    <p> oknew </p>
