@@ -6,16 +6,9 @@
     {{ end }}
     {{ .Content }}
 
-
-{{ $news := where .Site.Pages "Section" "offer" }} // news content
-
-{{$taggedContent := (index .Site.Params.tags "finland").Pages }}
-{{ $pages := intersect $news $taggedContent}} // Give you the pages that meet both queries
-
-{{ range first 3 $pages }}
-   {{ .Render "summary" }} 
-{{ end }}
-
+{{ $remaining := where .Site.Pages.ByDate.Reverse "Section" "offer" }}
+{{ $remaining = where $remaining ".Params.tags" "Finland"}}
+{{ $remaining }}
 
     <section class="" style="margin-top:75px;margin-bottom:-30px">
                 <div><h2 style="">Offers2</h2></div>        
