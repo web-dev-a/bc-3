@@ -21,7 +21,7 @@
 <h3>{{ $url := urls.Parse $link }}</h3>
  <h3>{{ $country := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }}</h3>
 
-{{ printf $lastUrlElement }}
+{{ printf $country }}
 
     <section class="tiles">
 
