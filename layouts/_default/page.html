@@ -6,10 +6,17 @@
     {{ end }}
     {{ .Content }}
 
-<link rel="canonical" href="{{ .Permalink }}">
-<link rel="canonical" href="{{ .Permalink | absURL }}">
-<link rel="canonical" href="{{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+<a href="{{ .Permalink }}">
+                    <h3>1</h3>
+                </a>
 
+<a href="{{ .Permalink | absURL }}">
+                    <h3>2</h3>
+                </a>
+
+<a href="{{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+                    <h3>3</h3>
+                </a>
 
     <section class="tiles">
 
