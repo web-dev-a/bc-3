@@ -6,30 +6,11 @@
     {{ end }}
     {{ .Content }}
 
-<a href="{{ .Permalink }}">
-                    <h3>{{ .Permalink }}</h3>
-                </a>
-
-<a href="{{ .Permalink | absURL }}">
-                    <h3>{{ .Permalink | absURL }}</h3>
-                </a>
-
-<a href="{{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
-                    <h3>{{ .Permalink | relURL }}</h3>
-                </a>
-<h3>{{ $link := .Permalink }}</h3>
-<h3>{{ $url := urls.Parse $link }}</h3>
- <h3>{{ $country := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }}</h3>
-
-{{ printf $country }}
 
     <section class="tiles">
-
-{{  $filter := "Finland" }} 
-        {{ if in .Params.tags $filter }}
-        <p> yes </p>
-               {{ end }}
-        
+{{ $link := .Permalink }}
+{{ $url := urls.Parse $link }}
+{{ $country := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
         {{ if in .Params.tags $country }}
             <article class="{{ $offer.Params.home_style }}">
