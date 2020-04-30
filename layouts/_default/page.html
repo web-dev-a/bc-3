@@ -7,15 +7,15 @@
     {{ .Content }}
 
 <a href="{{ .Permalink }}">
-                    <h3>1</h3>
+                    <h3>{{ .Permalink }}</h3>
                 </a>
 
 <a href="{{ .Permalink | absURL }}">
-                    <h3>2</h3>
+                    <h3>{{ .Permalink | absURL }}</h3>
                 </a>
 
 <a href="{{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
-                    <h3>3</h3>
+                    <h3>{{ .Permalink | relURL }}</h3>
                 </a>
 
     <section class="tiles">
