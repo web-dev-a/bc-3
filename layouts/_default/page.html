@@ -19,7 +19,7 @@
                 </a>
 <h3>{{ $link := .Permalink }}</h3>
 <h3>{{ $url := urls.Parse $link }}</h3>
- <h3>{{ $lastUrlElement := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }}</h3>
+ <h3>{{ $country := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }}</h3>
 
 {{ printf $lastUrlElement }}
 
@@ -31,7 +31,7 @@
                {{ end }}
         
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
-        {{ if in .Params.tags $filter }}
+        {{ if in .Params.tags $country }}
             <article class="{{ $offer.Params.home_style }}">
                 <span class="image">
                     <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
