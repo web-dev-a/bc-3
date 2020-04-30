@@ -19,7 +19,7 @@
                 </a>
 <h3>{{ $link := .Permalink }}</h3>
 <h3>{{ $url := urls.Parse $link }}</h3>
- <h3>{{ $lastUrlElement := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }}</h3>
+ <h3>{{ printf $lastUrlElement := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }}</h3>
 
     <section class="tiles">
 
