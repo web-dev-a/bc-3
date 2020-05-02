@@ -1675,9 +1675,7 @@ button,
             -ms-transform: scale(1.1);
             transform: scale(1.1); }
             body:not(.is-touch) .tiles article:hover > .image:before {
-
-				
-				background-color: transparent; }
+}
 				
             body:not(.is-touch) .tiles article:hover > .image:after {
                 opacity: 0; }
