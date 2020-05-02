@@ -1655,10 +1655,7 @@ button,
                 opacity: 0; }
                 .tiles article > a .content > :last-child {
                     margin-bottom: 0; }
-        .tiles article.style1 > .image:before {
-    
-                background-color: #333333;
-                opacity: 0.35; }	
+        .tiles article.style1 > .image:before {}	
 			
 			
         .tiles article.style2 > .image:before {
