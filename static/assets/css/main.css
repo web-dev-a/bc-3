@@ -1677,7 +1677,7 @@ button,
             body:not(.is-touch) .tiles article:hover > .image:before {
 
 				
-				background-color: #f2849e; }
+				background-color: transparent; }
 				
             body:not(.is-touch) .tiles article:hover > .image:after {
                 opacity: 0; }
