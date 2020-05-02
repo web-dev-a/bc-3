@@ -1655,11 +1655,12 @@ button,
                 opacity: 0; }
                 .tiles article > a .content > :last-child {
                     margin-bottom: 0; }
-        .tiles article.style1 > .image:before {}	
+        .tiles article.style1 > .image:before {
+           background-color: #transparent; }	
 			
 			
         .tiles article.style2 > .image:before {
-            background-color: #7ecaf6; }
+            background-color: #transparent; }
         .tiles article.style3 > .image:before {
             background-color: #7bd0c1; }
         .tiles article.style4 > .image:before {
