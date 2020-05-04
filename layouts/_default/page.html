@@ -16,51 +16,13 @@
                 <span class="image">
                     <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
                 </span>
-                <a href="{{ $offer.URL }}">
-                    <div class="content">
-                        {{ partial "markdownify-block" $offer.Params.excerpt }}
-                    </div>
-                </a>
+                <a href="{{ $offer.URL }}"></a>
             </article>
         {{ end }}
                 {{ end }}
     </section>
         
         
-{{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
-{{ with .Site.Params.Finland }}
-            <article class="{{ $offer.Params.home_style }}">
-                <span class="image">
-                    <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
-                </span>
-                <a href="{{ $offer.URL }}">
-                    <h3>{{ $offer.Title }}</h3>
-                    <div class="content">
-                        {{ partial "markdownify-block" $offer.Params.excerpt }}
-                    </div>
-                </a>
-            </article>
-        {{ end }}
-                {{ end }}
-    </section>
-
-
-{{ $remaining := where .Site.Pages.ByDate.Reverse "Section" "offer" }}
-{{ $remaining := where $remaining ".Params.tags" "finland"}}
-{{ range $remaining }}
-   <p> oknew </p>
-        {{ end }}
-
-    <section class="" style="margin-top:75px;margin-bottom:-30px">
-                <div><h2 style="">Offers2</h2></div>        
-    </section>
-    <section class="tiles">
-{{  $filter := .Title }} 
-{{ range (where (.Site.GetPage "section" "/offer").Pages ".Params.tags" "eq" $filter).ByDate.Reverse }}
-        <p> ok </p>
-        {{ end }}
-      
-    </section>
 
 
     <section class="" style="margin-top:75px;margin-bottom:-30px">
