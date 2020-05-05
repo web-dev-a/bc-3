@@ -2,7 +2,7 @@
     <h2>{{ .Site.Data.social.title }}</h2>
     <ul class="icons">
         {{ range $link := .Site.Data.social.follow_section }}
-            <li><a href="{{ $link.link_url }}"><img src="{{ $link.icon }}"><span class="label">{{ $link.title }}</span></a></li>
+            <li><a href="{{ $link.link_url }}"><img src="{{ $link.icon }}" alt="{{ $link.title }}"></a></li>
         {{ end }}
     </ul>
 </section>
