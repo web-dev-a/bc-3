@@ -7,7 +7,7 @@
 
     <section class="tiles">
 
-{{ range $offer := (first 3 (.Site.GetPage "section" "/offer" | first 3).Pages).ByDate.Reverse }}
+{{ range $offer := (first 3 (.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
             <article class="{{ $offer.Params.home_style }}">
                 <span class="image">
                     <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
