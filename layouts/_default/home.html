@@ -6,7 +6,7 @@
     </header>
 
     <section class="tiles">
-
+<h2>Latest offers</h2>
 {{ range $offer := (first 3 (.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
             <article class="{{ $offer.Params.home_style }}">
                 <span class="image">
