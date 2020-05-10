@@ -109,7 +109,7 @@ a {
     -ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
     transition: border-bottom-color 0.2s ease, color 0.2s ease;
     text-decoration: none;
-    color: #585858;
+	color: #585858;}
     a:hover {
         color: #fff !important; }
 
