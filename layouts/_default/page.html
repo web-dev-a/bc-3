@@ -5,7 +5,6 @@
         <span class="image main"><img src="{{ .Params.img_src | relURL }}" alt="" /></span>
     {{ end }}
     {{ .Content }}
-
     <section class="tiles">
 {{ $link := .Permalink }}
 {{ $url := urls.Parse $link }}
@@ -19,32 +18,6 @@
                 <a href="{{ $offer.URL }}"></a>
             </article>
         {{ end }}
-                {{ end }}
+{{ end }}
     </section>
-        
-        
-
-
-    <section class="" style="margin-top:75px;margin-bottom:-30px">
-                <div><h2 style="">Offers</h2></div>        
-    </section>
-    <section class="tiles">
-{{  $filter := .Title }} 
-{{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
-        {{ if in .Params.tags $filter }}
-            <article class="{{ $offer.Params.home_style }}">
-                <span class="image">
-                    <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
-                </span>
-                <a href="{{ $offer.URL }}">
-                    <h3>{{ $offer.Title }}</h3>
-                    <div class="content">
-                        {{ partial "markdownify-block" $offer.Params.excerpt }}
-                    </div>
-                </a>
-            </article>
-        {{ end }}
-                {{ end }}
-    </section>
-
 {{ end }}
