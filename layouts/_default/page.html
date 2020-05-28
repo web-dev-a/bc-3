@@ -8,9 +8,9 @@
     <section class="tiles">
 {{ $link := .Permalink }}
 {{ $url := urls.Parse $link }}
-{{ $country := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
+{{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
-        {{ if in .Params.tags $country }}
+        {{ if in .Params.tags $capital }}
             <article class="{{ $offer.Params.home_style }}">
                 <span class="image">
                     <img src="{{ $offer.Params.home_img | relURL }}" alt="" />
@@ -19,5 +19,14 @@
             </article>
         {{ end }}
 {{ end }}
+    </section>
+    <section class="tiles">
+ 
+        Test table should appear below:  
+
+{{< "data/tallinn" >}}
+
+{{< /test_table_shortcode >}}
+      text
     </section>
 {{ end }}
