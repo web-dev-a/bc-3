@@ -1,0 +1,60 @@
+﻿{
+    "City": {
+        "Tallin": {
+            "Attractions": {
+                "A1": {
+                    "Title": "Atr1",
+                    "Link": "http://atr1.com/"
+                },
+                "A2": {
+                    "Title": "Atr2",
+                    "Link": "http://atr2.com/"
+                }
+            },
+            "Reach": {
+                "T1": {
+                    "Title": "Luxexpress",
+                    "Logo": "http://lux.com/",
+                    "Link": "http://lux.com/"
+                },
+                "T2": {
+                    "Title": "Ecolines",
+                    "Logo": "http://eco.com/",
+                    "Link": "http://eco.com/"
+                }
+            },
+            "Public": {
+                "Company": "Tallinn transport",
+                "Link": "http://tansport.com/"
+            }
+        },
+        "Riga": {
+            "Attractions": {
+                "A1": {
+                    "Title": "Atr1",
+                    "Link": "http://atr1.com/"
+                },
+                "A2": {
+                    "Title": "Atr2",
+                    "Link": "http://atr2.com/"
+                }
+            },
+            "Reach": {
+                "T1": {
+                    "Title": "Luxexpress",
+                    "Logo": "http://lux.com/",
+                    "Link": "http://lux.com/"
+                },
+                "T2": {
+                    "Title": "Ecolines",
+                    "Logo": "http://eco.com/",
+                    "Link": "http://eco.com/"
+                }
+            },
+            "Public": {
+                "Company": "Riga transport",
+                "Link": "http://tansport.com/"
+            }
+        }
+    }
+}
