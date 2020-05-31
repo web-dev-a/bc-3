@@ -21,9 +21,9 @@
 {{ end }}
     </section>
     <section class="tiles">
-
+{{ if or (eq .URL "/finland/") (eq .URL "/estonia/)") }}
    {{ partial "capitaldata.html" (dict "capital" $capital) }}
-
+{{ end }}
 
     </section>
 {{ end }}
