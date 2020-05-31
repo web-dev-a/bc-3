@@ -1,1 +1,2 @@
-{{ partials .capital }}
+{{ $data_partial := (partial (printf "%s" .capital) .) }}
+{{ $data_partial }}
