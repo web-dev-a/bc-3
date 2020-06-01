@@ -1,9 +1,8 @@
-<h2>Offer</h2>
 <div style="display: flex; justify-content: center;">
 <table>
   <thead>
     <tr>
-      <th><i class="icon style1 fa-star"></i> Top attractions</th>
+      <th><i class="icon style1 fa-star"></i> Top sights in Helsinki</th>
     </tr>
   </thead>
   <tbody>
