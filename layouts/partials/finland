@@ -1,1 +1,27 @@
-test FI
+<h2>Offer</h2>
+<div style="display: flex; justify-content: center;">
+<table>
+  <thead>
+    <tr>
+      <th><i class="icon style1 fa-star"></i> Top attractions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+			<td><a href="https://www.tripadvisor.com/Attraction_Review-g189934-d199918-Reviews-Sea_Fortress_Suomenlinna-Helsinki_Uusimaa.html">Sea Fortress Suomenlinna</a></td>
+    </tr>
+    <tr>
+			<td><a href="https://www.tripadvisor.com/Attraction_Review-g189934-d1372894-Reviews-Temppeliaukio_Church-Helsinki_Uusimaa.html">Temppeliaukio Church</a></td>
+    </tr>
+    <tr>
+			<td><a href="https://www.tripadvisor.com/Attraction_Review-g189934-d202598-Reviews-Seurasaari_Island_and_Open_Air_Museum-Helsinki_Uusimaa.html">Seurasaari Island and Open-Air Museum</a></td>
+    </tr>
+    <tr>
+			<td><a href="https://www.tripadvisor.com/Attraction_Review-g189934-d202596-Reviews-Helsinki_Cathedral-Helsinki_Uusimaa.html">Helsinki Cathedral</a></td>
+    </tr>
+    <tr>
+			<td><a href="https://www.tripadvisor.com/Attraction_Review-g189934-d314921-Reviews-Old_Market_Hall-Helsinki_Uusimaa.html">Old Market Hall</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
