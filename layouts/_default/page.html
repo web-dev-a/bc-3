@@ -9,6 +9,13 @@
 {{ $link := .Permalink }}
 {{ $url := urls.Parse $link }}
 {{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
+        
+        {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
+        {{ if in .Params.tags $capital }}
+        <h2> Yes </h2>
+        {{ end }}
+                {{ end }}
+        
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
         {{ if in .Params.tags $capital }}
             <article class="{{ $offer.Params.home_style }}">
