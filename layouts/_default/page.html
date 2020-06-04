@@ -16,6 +16,14 @@
         {{ end }}
                 {{ end }}
         
+        
+        {{ range where (where .Pages "section" "/offer" ) ".Params.tags" "==" $capital }}
+         {{ if in .Params.tags $capital }}
+        <h2> Y </h2>
+        {{ end }}
+                {{ end }}       
+        
+        
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
         {{ if in .Params.tags $capital }}
             <article class="{{ $offer.Params.home_style }}">
