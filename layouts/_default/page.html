@@ -10,7 +10,7 @@
 {{ $url := urls.Parse $link }}
 {{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
         
-        {{ range first 1 ($offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse) }}
+        {{ range first 1 ($offer := (.Site.GetPage "section" "/offer").Pages) }}
         {{ if in .Params.tags $capital }}
         <h2> Yes </h2>
         {{ end }}
