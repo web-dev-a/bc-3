@@ -13,7 +13,7 @@
         {{ range first 1 ($offer := (.Site.GetPage "section" "/offer").Pages) }}
         {{ $abc := "0" }}
         {{ if in .Params.tags $capital }}
-        {{ add ((int $abc) 1)}}
+        {{ add (int $abc) 1}}
         <h2> Yes </h2>
         {{ end }}
         {{ int $abc }}
