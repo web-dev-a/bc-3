@@ -11,7 +11,7 @@
 {{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
         
         {{ range first 1 ($offer := (.Site.GetPage "section" "/offer").Pages) }}
-        {{ $abc := 0 }}
+        {{ $abc := "0" }}
         {{ if in .Params.tags $capital }}
         {{ add $abc 1}}
         <h2> Yes </h2>
