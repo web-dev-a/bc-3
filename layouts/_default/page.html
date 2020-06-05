@@ -10,7 +10,6 @@
 {{ $url := urls.Parse $link }}
 {{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
 
-                {{ $abc := "false" }}
         {{ range $offer := (.Site.GetPage "section" "/offer").Pages }}
         {{ if in .Params.tags $capital }}
         {{ $abc := "true" }}
