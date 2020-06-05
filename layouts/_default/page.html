@@ -16,8 +16,8 @@
         {{ $abc := "true" }}
         <h2> Yes </h2>
         {{ end }}
-        {{ printf $abc }}
                 {{ end }}
+        {{ printf $abc }}
         
         
         {{ range where (where .Pages "section" "/offer" ) ".Params.tags" "==" $capital }}
