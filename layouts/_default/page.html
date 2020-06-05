@@ -9,9 +9,9 @@
 {{ $link := .Permalink }}
 {{ $url := urls.Parse $link }}
 {{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
-        
-        {{ range first 1 ($offer := (.Site.GetPage "section" "/offer").Pages) }}
-        {{ $abc := "false" }}
+
+                {{ $abc := "false" }}
+        {{ range $offer := (.Site.GetPage "section" "/offer").Pages }}
         {{ if in .Params.tags $capital }}
         {{ $abc := "true" }}
         <h2> Yes </h2>
