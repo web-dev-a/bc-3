@@ -11,11 +11,11 @@
 {{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
 
 {{ $offer2 := ((.Site.GetPage "section" "/offer").Pages) }}
-{{ print in .Params.tags $capital}}
+{{ if in .Params.tags $capital}}
 
 {{ print $offer2 }}       
         
-        
+        {{ end }}
         
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
         {{ if in .Params.tags $capital }}
