@@ -9,19 +9,14 @@
 {{ $link := .Permalink }}
 {{ $url := urls.Parse $link }}
 {{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
+        {{ $s := slice "n" }}
 
-{{ $offer2 := ((.Site.GetPage "section" "/offer").Pages) }}
-{{ if in .Params.tags $capital}}
-
-
-    <h1>{{ .Title }}</h1>
-        
+{{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
+        {{ if in .Params.tags $capital }}
+        {{ $s = $s | append "y" }}
         {{ end }}
-        
-        {{ range where ($offer := (.Site.GetPage "section" "/offer").Pages) intersect .Params.tags $capital }}
-            <h1>{{ .Title }}</h1>
-
-        {{ end }}
+{{ end }}       
+        {{ println $s }}
         
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
         {{ if in .Params.tags $capital }}
