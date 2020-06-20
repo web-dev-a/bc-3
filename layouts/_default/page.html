@@ -15,13 +15,7 @@
 {{ $postCount := len $posts }}
 
 
-        
-        
-        {{ range where (where .Pages "section" "/offer" ) ".Params.tags" "==" $capital }}
-         {{ if in .Params.tags $capital }}
-        <h2> Y </h2>
-        {{ end }}
-                {{ end }}       
+{{ print $postCount }}       
         
         
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
