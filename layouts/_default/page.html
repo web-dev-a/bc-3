@@ -18,7 +18,7 @@
         
         {{ end }}
         
-        {{ range where ($offer := (.Site.GetPage "section" "/offer").Pages) .Params.tags $capital }}
+        {{ range where ($offer := (.Site.GetPage "section" "/offer").Pages) .Params.tags intersect $capital }}
             <h1>{{ .Title }}</h1>
 
         {{ end }}
