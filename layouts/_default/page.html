@@ -18,7 +18,7 @@
         
         {{ end }}
         
-        {{ range where ($offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse) "Params.tags" "finland" }}
+        {{ range where ($offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse) .Params.tags $capital }}
             <h1>{{ .Title }}</h1>
 
         {{ end }}
