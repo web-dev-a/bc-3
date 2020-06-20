@@ -6,6 +6,7 @@
     {{ end }}
     {{ .Content }}
     <section class="tiles">
+        <p>{{ len (where .Site.RegularPages "Section" "==" "/offer") }}.</p>
 {{ $link := .Permalink }}
 {{ $url := urls.Parse $link }}
 {{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
