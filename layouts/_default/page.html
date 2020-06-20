@@ -11,11 +11,11 @@
 {{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
 
 
-{{ $posts := (where .Site.RegularPages "Section" "==" "offer") }}
+{{ $posts := (where (where .Site.RegularPages "Section" "==" "offer") ".Params.tags" "intersect" (slice "finland")}}
 {{ $postCount := len $posts }}
 
-
 {{ print $postCount }}       
+        
         
         
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
