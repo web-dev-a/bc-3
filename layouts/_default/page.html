@@ -18,6 +18,11 @@
         
         {{ end }}
         
+        {{ range where .Site.Pages "Params.tags" "finland" }}
+            <h1>{{ .Title }}</h1>
+
+        {{ end }}
+        
 {{ range $offer := ((.Site.GetPage "section" "/offer").Pages).ByDate.Reverse }}
         {{ if in .Params.tags $capital }}
             <article class="{{ $offer.Params.home_style }}">
