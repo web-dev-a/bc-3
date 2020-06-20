@@ -13,7 +13,8 @@
 {{ $offer2 := ((.Site.GetPage "section" "/offer").Pages) }}
 {{ if in .Params.tags $capital}}
 
-{{ print $offer2 }}       
+
+    <h1>{{ .Title }}</h1>
         
         {{ end }}
         
