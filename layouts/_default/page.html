@@ -10,10 +10,10 @@
 {{ $url := urls.Parse $link }}
 {{ $capital := index (last 1 (split (delimit (split $url "/") "," "") ",")) 0 }} 
 
+{{ $offer2 := ((.Site.GetPage "section" "/offer").Pages) }}
+{{ print in .Params.tags $capital}}
 
-{{ $posts := (in .Params.tags $capital)}}
-
-{{ print $posts }}       
+{{ print $offer2 }}       
         
         
         
